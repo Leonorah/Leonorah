@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+<title>ABOUT</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px};
+}
+w3-jumbo {
+padding-left: 20px;
+}
+
+h1 {
+color: brown;
+font-family: courier;
+padding-left: 80px;
+}
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  background-image: url(images/umbrella.jpg);
+  overflow-x: hidden;
+  transition: 0.5s;
+  opacity: 20;
+  filter: alpha(opacity=50);;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+
+}
+.bg-img {
+ /* The image used */
+  background-image: url(images/umbrella.jpg);
+
+  min-height: 1000px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  /* Needed to position the navbar */
+  position: relative;
+}
+*,:before,:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font: 400 14px/1.3 "Poppins";
+  background: #333;
+}
+body {
+  padding-top: 3.5rem;
+}
+
+.grid { 
+  max-width: 992px;
+  margin: 0 auto;
+  font-size: 0;
+}
+
+.cell {
+  display: block;
+  font-size: 16px;
+  font-size: 1rem;
+  position: relative;
+}
+
+/* 
+  This is the first key to making squares! 
+  The padding value of 100% equates 100% of the parent's width,
+  which means that as long as we position the content of the
+  square absolutely and take it out of flow, it will appear as a
+  perfect square.
+*/
+.cell:after {
+  padding-bottom: 100%;
+  display: block;
+  content: '';
+}
+
+/* 
+  Here's the second key: the content element is where you'll put 
+  your video, your text, or whatever.
+  This needs to stretch to fill the parent, which you can do 
+  either by using height: 100%; width: 100%, or, for more precise 
+  control, use top/left/bottom/right like so:
+*/
+.content {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  padding: 1rem;
+  overflow: hidden; /* <-- THIS IS CRUCIAL IF YOU INTEND TO PUT VIDEOS OR IMAGES IN SQUARELY */
+}
+
+.content p {
+  color: #fefefe;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: .5em;
+  right: .5em;
+  margin: 0;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.content a,.disclaimer a {
+  color: goldenrod;
+  text-decoration: none;
+}
+
+.content._empty {
+  border: 1px dashed #fff;
+  transition: .3s cubic-bezier(.4,0,.2,1) border-color;
+}
+
+.content._empty:hover {
+  border-color: goldenrod
+}
+
+/* 
+  To make the video appear squarely, first center it with the
+  good ol' top/left/transformX/Y trick, then set 
+  `max-width: 100%; min-height: 100%` if your videos are landscape 
+  aspect-ratio and vice versa for portrait videos. 
+  If your content is going to be unpredictable in aspect-ratio, you 
+  could use JavaScript for this bit, or emit size-specific CSS classes in   
+  your server-side templates if you're not making an SPA.
+*/
+.content > video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  max-width: 100%;
+  min-height: 100%;
+  /*
+    You can also use object-fit: cover; object-position: center;
+    instead of the position/transform hack, but IE doesn't support this,
+    and pre-iOS10 Safari doesn't support object-position, so:
+  */
+}
+
+h1, h2 {
+  color: ;
+  text-align: center;
+  padding: 0 1em;
+}
+
+h1 {
+  margin: 3rem auto .5em;
+  color: brown;
+  padding-left: 20px;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 400;
+  margin: 0 auto 1.5em;
+}
+
+p{
+color: black;
+}
+
+@media (min-width: 580px){
+  .cell {
+    display: inline-block;
+    width: 50%;
+  }
+}
+
+@media (min-width: 768px){
+  .cell {
+    width: 33.3333%;
+    width: -webkit-calc(100% / 3);
+    width: -moz-calc(100% / 3);
+    width: calc(100% / 3);
+  }
+  .disclaimer {
+    right: 70%;
+  }
+}
+</style>
+<body BGCOLOR="WHITE">
+
+
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+   <div class="overlay-content">
+    <a href="index.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">HOME</a>
+    <a href="about.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">ABOUT</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">CONTACT</a>
+  </div>
+  </div>
+</div>
+
+<!-- Page Content -->
+<div class="w3-main w3-padding-large" style="margin-left:10%">
+
+  <!-- Menu icon to open sidebar -->
+ <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+  <!-- Header -->
+  <header class="w3-container w3-center" style="padding:128px 16px" id="home">
+    <h1 class="w3-jumbo"><b>Cindy Leonorah Moyo</b></h1>
+    <p>CREATOR.</p>
+    <button class="w3-button w3-light-grey w3-padding-large w3-margin-top">
+    <a href="CV.pdf"  <i class="fa fa-download"></i> Download Resume </a>
+    </button>
+  </header>
+  
+  <!-- About Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="about">
+    <h2>ABOUT</h2>
+    <hr class="w3-opacity">
+    <p>A results driven, self- motivated and resourceful individual. An intovert that comes alive when in the process of making artistic work and although most ventures are done well growing and becoming bigger and better is never a challange to be declined.
+	The desire to be in a challenging league that will use what I know and better the skills of creating is a daily mantra which is lived by.
+    Working towards these goal consistently being in a creative environment alongside other multimedia, designers, copywriters, content strategists, user experience specialists, and interactive developers amongst other people builds the brand as a hardworker and team player.
+	With experience in UX Design Thinking, understanding is number one priority from there everything is done so well it becomes second nature, it becomes BASIC.
+
+
+
+  <!-- Portfolio Section -->
+  
+  <h2> PORTFOLIO</h2>
+<div class="grid">
+  <div class="cell">
+    <div class="content">
+      <video webkit-playsinline playsinline muted loop autoplay>
+        <source src="videos/blend.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+  <div class="cell">
+    <div class="content">
+      <video webkit-playsinline playsinline muted loop autoplay>
+        <source src="videos/dimentia.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+  <div class="cell">
+    <div class="content">
+      <video webkit-playsinline playsinline muted loop autoplay>
+        <source src="videos/video.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+  <div class="cell">
+    <div class="content">
+      <video webkit-playsinline playsinline muted loop autoplay>
+        <source src="videos/seitan.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+  <div class="cell">
+    <div class="content">
+      <video webkit-playsinline playsinline muted loop autoplay>
+        <source src="videos/car.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+  <div class="cell">
+    <div class="content">
+      <video webkit-playsinline playsinline muted loop autoplay>
+        <source src="videos/basic.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+  <div class="cell">
+    <div class="content">
+      <video webkit-playsinline playsinline muted loop autoplay>
+        <source src="https://storage.googleapis.com/gweb-ai-experiments.appspot.com/7068-vhds.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+  <div class="cell">
+    <div class="content">
+      <video webkit-playsinline playsinline muted loop autoplay>
+        <source src="https://storage.googleapis.com/gweb-ai-experiments.appspot.com/7838-neural%2004.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+  <div class="cell">
+    <div class="content">
+      <video webkit-playsinline playsinline muted loop autoplay>
+        <source src="videos/cool.mp4" type="video/mp4">
+    </div>
+  </div>
+</div>
+	
+    </p>
+    <h3 class="w3-padding-16">My Skills</h3>
+    <p class="w3-wide">Videography</p>
+    <div class="w3-light-grey">
+	 <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:90%">90%</div>
+    </div>
+    <p class="w3-wide">Adobe Premiere Pro</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:90%">90%</div>
+    </div>
+	<p class="w3-wide">Final Cut</p>
+    <div class="w3-light-grey">
+	 <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:90%">90%</div>
+    </div>
+    <p class="w3-wide">Adobe Photoshop</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:85%">85%</div>
+    </div>
+    <p class="w3-wide">Photography</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:80%">80%</div>
+	  <p class="w3-wide">Scriptwriting</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:80%">80%</div>
+	  <p class="w3-wide">Producing</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:80%">80%</div>
+	  <p class="w3-wide">After Effects</p>
+    <div class="w3-light-grey">
+      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:75%">75%</div>
+    </div><br>
+
+    <button class="w3-button w3-light-grey w3-padding-large w3-section">
+      <a href="CV.pdf"<i class="fa fa-download"></i> Download Resume </a>
+    </button>
+
+  <!-- End About Section -->
+  </div>
+<!-- Grid for pricing tables -->
+    <h3 class="w3-padding-16">My Price</h3>
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-half w3-margin-bottom">
+        <ul class="w3-ul w3-center w3-card w3-hover-shadow">
+          <li class="w3-dark-grey w3-xlarge w3-padding-32">Basic</li>
+          <li class="w3-padding-16">Editing</li>
+          <li class="w3-padding-16">Photography</li>
+          <li class="w3-padding-16">Videography</li>
+          <li class="w3-padding-16">Scriptwriting</li>
+		  <li class="w3-padding-16">Producing</li>
+          <li class="w3-padding-16">
+            <h2>COMING SOON...</h2>
+            <span class="w3-opacity">JUST HOLD ON</span>
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="w3-half">
+        <ul class="w3-ul w3-center w3-card w3-hover-shadow">
+          <li class="w3-black w3-xlarge w3-padding-32">Collaboration</li>
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-white w3-padding-large w3-hover-black">TALK TO ME - SEND MESSAGE </button>
+          </li>
+        </ul>
+      </div>
+    <!-- End Grid/Pricing tables -->
+    </div>
+  <!-- Contact Section -->
+  <div class="w3-padding-32 w3-content w3-text-grey" id="contact" style="margin-bottom:64px">
+    <h2>Contact Me</h2>
+    <hr class="w3-opacity">
+
+    <div class="w3-section">
+      <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Braamfontein, Johannesburg, South Africa</p>
+      <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: 072 569 9134</p>
+      <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> leonorah45@gmail.com</p>
+    </div
+	
+   
+   
+   <!-- End Contact Section -->
+   
+    <p>Send me a message:</p>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Subject" required name="Subject"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="Message"></p>
+      <p>
+        <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE 
+		  </button>
+      </p>
+    </form>
+  <!-- End Contact Section -->
+  </div>  
+  
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin:-24px">
+   <a href="https://www.facebook.com/cmoyo1" <i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+    <a href= "https://www.instagram.com/cindx_x/?hl=en" <i class="fa fa-instagram w3-hover-opacity"></i></a>
+    <i class="fa fa-tumblr-p w3-hover-opacity"></i>
+    <a href="https://twitter.com/Cindx_x" <i class="fa fa-twitter w3-hover-opacity"></i></a>
+   <a href="https://www.linkedin.com/in/leonorah-moyo-804058101/" <i class="fa fa-linkedin w3-hover-opacity"></i></a>
+
+  <!-- End footer -->
+  </footer>
+  
+<!-- END PAGE CONTENT -->
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+/* You DO need JavaScript to play and pause videos.
+   However, you don't need jQuery */
+
+document.body.addEventListener('mouseover',function(e){
+  var evt = (e.target || this);
+  if (evt.tagName.toLowerCase() === 'video'){
+    !!(evt.paused) && evt.play();
+  }
+});
+
+document.body.addEventListener('mouseout',function(e){
+  var evt = (e.target || this);
+  if (evt.tagName.toLowerCase() === 'video'){
+    !(evt.paused) && evt.pause();
+  }
+});
+
+window.onload = function(){
+  window.setTimeout(function(){
+  document.querySelector('.disclaimer').parentNode.removeChild(document.querySelector('.disclaimer'));
+},1e4);
+};
+</script>
+</body>
+</html>
